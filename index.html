@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>MisTsiM</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #stage { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); cursor: none; touch-action: none; }
+  #stage canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    image-rendering: pixelated; image-rendering: crisp-edges; }
+  #err { display: none; position: absolute; inset: 0; color: #8b9172; font: 14px monospace;
+    align-items: center; justify-content: center; text-align: center; padding: 2em; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <canvas id="ui"></canvas>
+</div>
+<div id="err">MisTsiM needs WebGL2 with float render targets.<br>Try a current Chrome, Firefox or Edge.</div>
+<script src="src/gl.js"></script>
+<script src="src/shaders.js"></script>
+<script src="src/sim.js"></script>
+<script src="src/art.js"></script>
+<script src="src/items.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
