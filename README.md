@@ -38,3 +38,9 @@ Open `index.html` in a current Chrome, Firefox or Edge. It also works from any s
 
 - [docs/DESIGN.md](docs/DESIGN.md) — how the simulation and the picture work
 - [docs/HANDOFF.md](docs/HANDOFF.md) — current state, how to add placeables, what to build next
+
+## Windows exe
+
+`launcher/build.sh` builds `launcher/MisTsiM.exe` (needs Go). The exe has the app embedded, serves it on a
+local port and opens it in a borderless Edge or Chrome window, or the default browser if neither is found.
+It exits on its own about 90 seconds after the window is closed.
